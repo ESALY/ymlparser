@@ -16,8 +16,8 @@
 
 
     <!-- Js -->
-    <script src="{{ asset('/distrib/vue.js') }}"></script>
-    <script src="{{ asset('/distrib/axios.min.js') }}"></script>
+    <script src="{{ asset('/js/vue.js') }}"></script>
+    <script src="{{ asset('/js/axios.min.js') }}"></script>
 
 
     <!-- import JavaScript -->
