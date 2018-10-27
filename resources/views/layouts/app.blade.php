@@ -12,7 +12,7 @@
     <link rel="shortcut icon" href="images/favicon.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="    {{ secure_asset('/css/style.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('/css/style.css') }}">
 
     <!-- Js -->
     <script src="{{ secure_asset('/js/vue.js') }}"></script>
