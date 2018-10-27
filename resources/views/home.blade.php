@@ -3,7 +3,22 @@
 @section('content')
     <div id="app">
     <el-container  :style="{ height: window.height + 'px' }">
-        <el-aside width="200px">Aside</el-aside>
+        <el-aside width="200px">
+            {{--Aside--}}
+            <div class="search">
+                <el-form :label-position="right" label-width="100px" :model="searchForm">
+                    <el-form-item label="Name">
+                        <el-input v-model="searchForm.name"></el-input>
+                    </el-form-item>
+                    <el-form-item label="Activity zone">
+                        <el-input v-model="searchForm.region"></el-input>
+                    </el-form-item>
+                    <el-form-item label="Activity form">
+                        <el-input v-model="searchForm.type"></el-input>
+                    </el-form-item>
+                </el-form>
+            </div>
+        </el-aside>
         <el-container>
             <el-header>Header</el-header>
             <el-main>
@@ -28,6 +43,11 @@
                 window: {
                     width: 0,
                     height: 0
+                },
+                searchForm: {
+                    name: '',
+                    region: '',
+                    type: ''
                 },
                 hello: 'im vue',
             },
