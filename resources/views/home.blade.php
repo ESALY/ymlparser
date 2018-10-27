@@ -7,12 +7,12 @@
             {{--Aside--}}
             <div class="search-wrapper">
                 <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
-                    <el-form-item label="Name">
+                    <el-form-item label="Поиск">
                         <el-input v-model="searchForm.name"></el-input>
                     </el-form-item>
                     <el-form-item>
-                        <el-button type="primary" @click="submitForm('searchForm')">Search</el-button>
-                        <el-button @click="resetForm('ruleForm')">Reset</el-button>
+                        <el-button type="primary" @click="submitForm('searchForm')">Искать</el-button>
+                        <el-button @click="resetForm('ruleForm')">Сбросить</el-button>
                     </el-form-item>
                 </el-form>
             </div>
