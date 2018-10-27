@@ -3,10 +3,10 @@
 @section('content')
     <div id="app">
     <el-container  :style="{ height: window.height + 'px' }">
-        <el-aside width="200px">
+        <el-aside width="300px">
             {{--Aside--}}
             <div class="search">
-                <el-form :label-position="right" label-width="100px" :model="searchForm">
+                <el-form :label-position="top" label-width="100px" :model="searchForm">
                     <el-form-item label="Name">
                         <el-input v-model="searchForm.name"></el-input>
                     </el-form-item>
