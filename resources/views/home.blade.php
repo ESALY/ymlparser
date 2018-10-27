@@ -8,7 +8,6 @@
             <el-header>Header</el-header>
             <el-main>
                 @{{hello}}
-                <p>My BoundingClientRect is: @{{ pRect }}<p>
             </el-main>
             <el-footer>Footer</el-footer>
         </el-container>
@@ -31,7 +30,7 @@
             },
             mounted() {
                 this.$nextTick(() => {
-                    this.pRect = document.querySelector('body').getBoundingClientRect();
+
                 })
             }
         });
