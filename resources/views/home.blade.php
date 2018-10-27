@@ -20,7 +20,29 @@
         <el-container>
             <el-header>Header</el-header>
             <el-main>
-                @{{hello}}
+                <div  class="products">
+                    <template>
+                        <el-table
+                                :data="products"
+                                height="250"
+                                style="width: 100%">
+                            <el-table-column
+                                    prop="date"
+                                    label="Date"
+                                    width="180">
+                            </el-table-column>
+                            <el-table-column
+                                    prop="name"
+                                    label="Name"
+                                    width="180">
+                            </el-table-column>
+                            <el-table-column
+                                    prop="address"
+                                    label="Address">
+                            </el-table-column>
+                        </el-table>
+                    </template>
+                </div>
             </el-main>
             <el-footer>
                 {{--Footer--}}
@@ -35,9 +57,10 @@
         axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
         // bootstrap the demo
-        var vapp = new Vue({
+        var app = new Vue({
             el: '#app',
             data: {
+                products: [],
                 window: {
                     width: 0,
                     height: 0
@@ -55,6 +78,7 @@
                     axios.get('/items/get')
                         .then(function (response) {
                             console.log(response.data);
+                            app.products = response.data;
                         })
                         .catch(function (error) {
                             console.log(error);
