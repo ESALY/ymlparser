@@ -10,11 +10,9 @@
                     <el-form-item label="Name">
                         <el-input v-model="searchForm.name"></el-input>
                     </el-form-item>
-                    <el-form-item label="Activity zone">
-                        <el-input v-model="searchForm.region"></el-input>
-                    </el-form-item>
-                    <el-form-item label="Activity form">
-                        <el-input v-model="searchForm.type"></el-input>
+                    <el-form-item>
+                        <el-button type="primary" @click="submitForm('searchForm')">Search</el-button>
+                        <el-button @click="resetForm('ruleForm')">Reset</el-button>
                     </el-form-item>
                 </el-form>
             </div>

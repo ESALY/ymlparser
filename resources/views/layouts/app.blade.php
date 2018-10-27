@@ -35,7 +35,7 @@
 
         /* search div */
         .search-wrapper{
-            margin: 8px;
+            margin: 15px;
         }
 
         .el-form-item__label{
