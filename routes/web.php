@@ -15,5 +15,5 @@ Route::get('/', function () {
     return view('home');
 });
 
-
+Route::get('/items/get', 'ItemsController@items_get');
 Route::get('/import-debug', 'ImportsController@test_import');

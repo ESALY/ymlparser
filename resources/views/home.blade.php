@@ -51,15 +51,22 @@
                 hello: 'im vue',
             },
             methods: {
+                init: function () {
+                    axios.get('/items/get')
+                        .then(function (response) {
+                            console.log(response.data);
+                        })
+                        .catch(function (error) {
+                            console.log(error);
+                        });
+                },
                 handleResize() {
                     this.window.width = window.innerWidth;
                     this.window.height = window.innerHeight;
                 }
             },
             mounted() {
-                this.$nextTick(() => {
-
-                })
+                this.init();
             },
             created() {
                 window.addEventListener('resize', this.handleResize)
