@@ -69,7 +69,7 @@
                 },
                 getItems: function () {
 
-                    axios.post('/items/get/', {
+                    axios.post('https://tranquil-spire-73723.herokuapp.com/items/get/', {
                         params: app.searchForm
                     })
                         .then(function (response) {

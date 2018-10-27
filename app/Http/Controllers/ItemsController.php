@@ -14,6 +14,6 @@ class ItemsController extends Controller
         $searchString = $inputArray['name'];
 
         $products = Product::where('name','LIKE','%'.$searchString.'%')->limit(100)->get();
-       return json_encode($products);
+        return json_encode($products);
     }
 }
