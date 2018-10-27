@@ -2,10 +2,18 @@
 
 @section('content')
     <div id="app">
-        @{{hello}}7
+    <el-container>
+        <el-aside width="200px">Aside</el-aside>
+        <el-container>
+            <el-header>Header</el-header>
+            <el-main>
+                @{{hello}}
+            </el-main>
+            <el-footer>Footer</el-footer>
+        </el-container>
+    </el-container>
     </div>
-    {{--<script src="{{ asset('/js/app.js') }}"></script>--}}
-
+    </div>
     <script>
         axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
 
