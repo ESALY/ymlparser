@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="app">
-    <el-container>
+    <el-container style="height: -webkit-fill-available;">
         <el-aside width="200px">Aside</el-aside>
         <el-container>
             <el-header>Header</el-header>
