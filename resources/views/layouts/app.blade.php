@@ -46,6 +46,10 @@
             padding: 0 0 10px;
         }
 
+        .el-form-item {
+            margin-bottom: 5px;
+        }
+
         .el-header, .el-footer {
             background-color: #B3C0D1;
             color: #333;
