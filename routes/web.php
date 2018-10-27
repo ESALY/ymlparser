@@ -16,4 +16,4 @@ Route::get('/', function () {
 });
 
 
-Route::get('/import-debug', 'ImportsController@import');
+Route::get('/import-debug', 'ImportsController@test_import');
