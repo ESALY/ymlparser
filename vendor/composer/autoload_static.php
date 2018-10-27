@@ -23,6 +23,10 @@ class ComposerStaticInitf78d48f36fccb57f874430fb00cb71f2
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'Y' => 
+        array (
+            'YbrNX\\MariaDB\\' => 14,
+        ),
         'X' => 
         array (
             'XdgBaseDir\\' => 11,
@@ -130,6 +134,10 @@ class ComposerStaticInitf78d48f36fccb57f874430fb00cb71f2
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'YbrNX\\MariaDB\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ybr-nx/laravel-mariadb/src',
         ),
         'XdgBaseDir\\' => 
         array (
@@ -4019,6 +4027,11 @@ class ComposerStaticInitf78d48f36fccb57f874430fb00cb71f2
         'Whoops\\Util\\SystemFacade' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/SystemFacade.php',
         'Whoops\\Util\\TemplateHelper' => __DIR__ . '/..' . '/filp/whoops/src/Whoops/Util/TemplateHelper.php',
         'XdgBaseDir\\Xdg' => __DIR__ . '/..' . '/dnoegel/php-xdg-base-dir/src/Xdg.php',
+        'YbrNX\\MariaDB\\Connection' => __DIR__ . '/..' . '/ybr-nx/laravel-mariadb/src/Connection.php',
+        'YbrNX\\MariaDB\\ConnectionFactory' => __DIR__ . '/..' . '/ybr-nx/laravel-mariadb/src/ConnectionFactory.php',
+        'YbrNX\\MariaDB\\MariaDBServiceProvider' => __DIR__ . '/..' . '/ybr-nx/laravel-mariadb/src/MariaDBServiceProvider.php',
+        'YbrNX\\MariaDB\\QueryGrammar' => __DIR__ . '/..' . '/ybr-nx/laravel-mariadb/src/QueryGrammar.php',
+        'YbrNX\\MariaDB\\SchemaGrammar' => __DIR__ . '/..' . '/ybr-nx/laravel-mariadb/src/SchemaGrammar.php',
         'phpDocumentor\\Reflection\\DocBlock' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlock.php',
         'phpDocumentor\\Reflection\\DocBlockFactory' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactory.php',
         'phpDocumentor\\Reflection\\DocBlockFactoryInterface' => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src/DocBlockFactoryInterface.php',

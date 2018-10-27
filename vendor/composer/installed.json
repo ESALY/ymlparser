@@ -823,17 +823,17 @@
     },
     {
         "name": "filp/whoops",
-        "version": "2.2.1",
-        "version_normalized": "2.2.1.0",
+        "version": "2.3.1",
+        "version_normalized": "2.3.1.0",
         "source": {
             "type": "git",
             "url": "https://github.com/filp/whoops.git",
-            "reference": "e79cd403fb77fc8963a99ecc30e80ddd885b3311"
+            "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/filp/whoops/zipball/e79cd403fb77fc8963a99ecc30e80ddd885b3311",
-            "reference": "e79cd403fb77fc8963a99ecc30e80ddd885b3311",
+            "url": "https://api.github.com/repos/filp/whoops/zipball/bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
+            "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
             "shasum": ""
         },
         "require": {
@@ -849,7 +849,7 @@
             "symfony/var-dumper": "Pretty print complex values better with var-dumper available",
             "whoops/soap": "Formats errors as SOAP responses"
         },
-        "time": "2018-06-30T13:14:06+00:00",
+        "time": "2018-10-23T09:00:00+00:00",
         "type": "library",
         "extra": {
             "branch-alias": {
@@ -4807,6 +4807,57 @@
             "assert",
             "check",
             "validate"
+        ]
+    },
+    {
+        "name": "ybr-nx/laravel-mariadb",
+        "version": "1.0.17",
+        "version_normalized": "1.0.17.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/ybr-nx/laravel-mariadb.git",
+            "reference": "213c9dc0978b54f4ca5d3e7c2a4f94a1f6462f85"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/ybr-nx/laravel-mariadb/zipball/213c9dc0978b54f4ca5d3e7c2a4f94a1f6462f85",
+            "reference": "213c9dc0978b54f4ca5d3e7c2a4f94a1f6462f85",
+            "shasum": ""
+        },
+        "require": {
+            "illuminate/database": "5.3.*|5.4.*|5.5.*|5.6.*|5.7.*"
+        },
+        "time": "2018-08-17T18:59:12+00:00",
+        "type": "library",
+        "extra": {
+            "laravel": {
+                "providers": [
+                    "YbrNX\\MariaDB\\MariaDBServiceProvider"
+                ]
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "YbrNX\\MariaDB\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "EUPL-1.2"
+        ],
+        "authors": [
+            {
+                "name": "Ingmar Aasoja",
+                "email": "ingmar@aasoja.ee"
+            }
+        ],
+        "description": "Add MariaDB JSON select support to Laravel",
+        "keywords": [
+            "database",
+            "json",
+            "laravel",
+            "mariadb"
         ]
     }
 ]
