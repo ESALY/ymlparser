@@ -14,5 +14,5 @@
 Route::get('/', function () {
     return view('home');
 });
-Route::get('/items/get/{params}',['uses' =>'ItemsController@items_get']);
+Route::post('/items/get',['uses' =>'ItemsController@items_get']);
 Route::get('/import-debug', 'ImportsController@test_import');

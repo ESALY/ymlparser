@@ -68,7 +68,10 @@
                     this.getItems();
                 },
                 getItems: function () {
-                    axios.get('/items/get/' + app.searchForm.name)
+
+                    axios.post('/items/get/', {
+                        params: app.searchForm
+                    })
                         .then(function (response) {
                             console.log(response.data);
                             app.products = response.data;
