@@ -2,7 +2,7 @@
 
 @section('content')
     <div id="app">
-        @{{hello}}
+        @{{hello1}}
     </div>
     {{--<script src="{{ asset('/js/app.js') }}"></script>--}}
 
