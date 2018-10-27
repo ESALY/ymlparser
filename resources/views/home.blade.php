@@ -6,7 +6,7 @@
         <el-aside width="300px">
             {{--Aside--}}
             <div class="search">
-                <el-form :label-position="top" label-width="100px" :model="searchForm">
+                <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
                     <el-form-item label="Name">
                         <el-input v-model="searchForm.name"></el-input>
                     </el-form-item>
@@ -45,6 +45,7 @@
                     height: 0
                 },
                 searchForm: {
+                    labelPosition: 'top',
                     name: '',
                     region: '',
                     type: ''
