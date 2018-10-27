@@ -28,6 +28,11 @@
 
     <style>
         @import url("//unpkg.com/element-ui@2.4.9/lib/theme-chalk/index.css");
+
+        body{
+            margin: 0;
+        }
+
         .el-header, .el-footer {
             background-color: #B3C0D1;
             color: #333;
