@@ -43,7 +43,7 @@
         }
 
         .el-form--label-top .el-form-item__label {
-            padding: 0 0 10px;
+            padding: 0 0 0px;
         }
 
         .el-form-item {
