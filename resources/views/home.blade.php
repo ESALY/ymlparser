@@ -28,7 +28,7 @@
                             <el-table-column
                                     prop="name"
                                     label="Name"
-                                    width="180">
+                                    width="">
                             </el-table-column>
                         </el-table>
                     </template>
