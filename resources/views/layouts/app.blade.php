@@ -18,17 +18,19 @@
     <script src="{{ secure_asset('/js/vue.js') }}"></script>
     <script src="{{ secure_asset('/js/axios.min.js') }}"></script>
 
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/umd/locale/ru-RU.js"></script>
+
+    <script>
+        ELEMENT.locale(ELEMENT.lang.ruRU)
+    </script>
+
 </head>
 <body>
 
 @yield('content')
 
 </body>
-<!-- import JavaScript -->
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-<script src="https://unpkg.com/element-ui/lib/umd/locale/ru-RU.js"></script>
 
-<script>
-    ELEMENT.locale(ELEMENT.lang.ruRU)
-</script>
 </html>
