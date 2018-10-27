@@ -11,7 +11,7 @@
                         <el-input v-model="searchForm.name"></el-input>
                     </el-form-item>
                     <el-form-item>
-                        <el-button type="primary" @click="submitForm('searchForm')">Искать</el-button>
+                        <el-button type="primary" @click="getItems()">Искать</el-button>
                         <el-button @click="resetForm('ruleForm')">Сбросить</el-button>
                     </el-form-item>
                 </el-form>
@@ -65,7 +65,10 @@
             },
             methods: {
                 init: function () {
-                    axios.get('/items/get')
+                    this.getItems();
+                },
+                getItems: function () {
+                    axios.get('/items/get/' + app.searchForm.name)
                         .then(function (response) {
                             console.log(response.data);
                             app.products = response.data;
