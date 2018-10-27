@@ -9,7 +9,11 @@
             <el-main>
                 @{{hello}}
             </el-main>
-            <el-footer>Footer</el-footer>
+            <el-footer>
+                {{--Footer--}}
+                Width: @{{ window.width }},
+                Height: @{{ window.height }}
+            </el-footer>
         </el-container>
     </el-container>
     </div>
@@ -21,17 +25,29 @@
         var vapp = new Vue({
             el: '#app',
             data: {
-                pRect: 0,
+                window: {
+                    width: 0,
+                    height: 0
+                },
                 hello: 'im vue',
             },
-            methods:{}
-            ,
-            created: function(){
+            methods: {
+                handleResize() {
+                    this.window.width = window.innerWidth;
+                    this.window.height = window.innerHeight;
+                }
             },
             mounted() {
                 this.$nextTick(() => {
 
                 })
+            },
+            created() {
+                window.addEventListener('resize', this.handleResize)
+                this.handleResize();
+            },
+            destroyed() {
+                window.removeEventListener('resize', this.handleResize)
             }
         });
 
