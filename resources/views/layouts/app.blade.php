@@ -33,8 +33,17 @@
             margin: 0;
         }
 
+        /* search div */
         .search-wrapper{
             margin: 5px;
+        }
+
+        .el-form-item__label{
+            line-height: 30px;
+        }
+
+        .el-form--label-top .el-form-item__label {
+            padding: 0 0 10px;
         }
 
         .el-header, .el-footer {
