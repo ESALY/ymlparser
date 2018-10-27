@@ -45,6 +45,11 @@
     </div>
     <script>
         axios.defaults.headers.common['X-CSRF-TOKEN'] = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+        const instance = axios.create({
+            httpsAgent: new https.Agent({
+                rejectUnauthorized: false
+            })
+        });
 
         // bootstrap the demo
         var app = new Vue({
@@ -69,7 +74,7 @@
                 },
                 getItems: function () {
 
-                    axios.post('https://tranquil-spire-73723.herokuapp.com/items/get/', {
+                    instance.post('https://tranquil-spire-73723.herokuapp.com/items/get/', {
                         params: app.searchForm
                     })
                         .then(function (response) {
