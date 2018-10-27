@@ -86,11 +86,12 @@
                 }
             },
             mounted() {
-                this.init();
+
             },
             created() {
                 window.addEventListener('resize', this.handleResize)
                 this.handleResize();
+                this.init();
             },
             destroyed() {
                 window.removeEventListener('resize', this.handleResize)
