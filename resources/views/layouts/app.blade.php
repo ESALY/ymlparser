@@ -33,6 +33,10 @@
             margin: 0;
         }
 
+        .search-wrapper{
+            margin: 5px;
+        }
+
         .el-header, .el-footer {
             background-color: #B3C0D1;
             color: #333;
@@ -43,8 +47,6 @@
         .el-aside {
             background-color: #D3DCE6;
             color: #333;
-            text-align: center;
-            line-height: 200px;
         }
 
         .el-main {

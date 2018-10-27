@@ -5,7 +5,7 @@
     <el-container  :style="{ height: window.height + 'px' }">
         <el-aside width="300px">
             {{--Aside--}}
-            <div class="search">
+            <div class="search-wrapper">
                 <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
                     <el-form-item label="Name">
                         <el-input v-model="searchForm.name"></el-input>
