@@ -16,6 +16,7 @@ class ItemsController extends Controller
         $products = Product::select('products.*','categories.name as cat_name')
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
             ->where('products.name','LIKE','%'.$name.'%')
+            ->orWhere('cat_name','LIKE','%'.$name.'%')
             ->limit(50)->get();
         return json_encode($products);
     }
