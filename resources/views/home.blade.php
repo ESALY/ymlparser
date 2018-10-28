@@ -35,7 +35,7 @@
                             </el-table-column>
                             <el-table-column
                                     label="Name"
-                                    width="">
+                                    width="150">
                             <template slot-scope="scope">
                                 <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
                                     @{{ scope.row.name }}
