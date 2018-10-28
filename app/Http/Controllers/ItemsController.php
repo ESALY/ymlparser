@@ -18,7 +18,7 @@ class ItemsController extends Controller
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
             ->where('products.name','LIKE','%'.$search.'%')
             ->orWhere('categories.name','LIKE','%'.$search.'%')
-            ->orWhere('products.raw_id','=',$search)
+            ->orWhere('products.raw_id','LIKE','%'.$search.'%')
             ->limit($limit)
             ->get();
         return $products->toJson();
