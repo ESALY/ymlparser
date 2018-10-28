@@ -26,7 +26,7 @@
                                 style="width: 100%">
                             <el-table-column
                                     label="Img"
-                                    width="">
+                                    width="80">
                                 <template slot-scope="scope">
                                     <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
                                         <img v-bind:src="scope.row.img" width="70" height="70">
@@ -44,7 +44,7 @@
                             </el-table-column>
                             <el-table-column
                                     label="Price"
-                                    width="">
+                                    width="80">
                                 <template slot-scope="scope">
                                         @{{ scope.row.price }}
                                 </template>
