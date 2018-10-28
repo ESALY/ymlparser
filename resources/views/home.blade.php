@@ -27,7 +27,8 @@
                             <el-table-column
                                     prop="name"
                                     label="Name"
-                                    width="">
+                                    width=""
+                                    @click="alert(1)">
                             </el-table-column>
                         </el-table>
                     </template>
