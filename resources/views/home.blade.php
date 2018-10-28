@@ -8,7 +8,7 @@
             <div class="search-wrapper">
                 <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
                     <el-form-item label="Поиск">
-                        <el-input v-model="searchForm.name" :fetch-suggestions="getItems()"></el-input>
+                        <el-input v-model="searchForm.name" ></el-input>
                     </el-form-item>
                     <el-form-item>
                         <el-button type="primary" @click="getItems()">Искать</el-button>
