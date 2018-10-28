@@ -38,7 +38,7 @@
                                     label="Name"
                                     width="350">
                             <template slot-scope="scope">
-                                <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
+                                <a :href="'/id/' + scope.row.raw_id" target="_blank">
                                     @{{ scope.row.name }}
                                 </a>
                             </template>
