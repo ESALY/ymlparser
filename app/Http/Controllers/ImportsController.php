@@ -112,21 +112,13 @@ class ImportsController extends Controller
                     }
                 }
 
-                /*
+
+                $description = '';
                 if (isset($offer['description']) && !is_array($offer['description'])) {
-                    $newOffer['description'] = $offer['description'];
-                }else{
-                    $newOffer['description'] = '';
-                }
-                */
-
-                if (isset($offer['description'])) {
-                    $newOffer['description'] = $offer['description'];
-                }else{
-                    $newOffer['description'] = '';
+                    $description = str_limit($offer['description'], $limit = 1000, $end = '...');
                 }
 
-                $newOffer['description'] = '';
+                $newOffer['description'] = $description;
                 $newOffer['raw_id'] = $id;
                 $newOffer['name'] = $name;
                 $newOffer['shop_id'] = $yamlArray['shop_name'] ;
