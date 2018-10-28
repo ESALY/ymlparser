@@ -15,8 +15,8 @@ class ItemsController extends Controller
 
         $products = Product::where('name','LIKE','%'.$name.'%')
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
-            ->select('products*','categories.name as category_name')
-            ->limit(100)->get();
+            ->select('products*','categories.parent_id')
+            ->limit(50)->get();
         return json_encode($products);
     }
 }
