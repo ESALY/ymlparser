@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 Route::get('/import', function () {
-    return view('home');
+    return view('import');
 });
 
 Route::get('/id/{id}',['uses' =>'ItemsController@item_get']);
