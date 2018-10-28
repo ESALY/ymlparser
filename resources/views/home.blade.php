@@ -28,7 +28,7 @@
                                     prop="name"
                                     label="Name"
                                     width=""
-                                    @click="alert(1)">
+                                    @click="showProduct();">
                             </el-table-column>
                         </el-table>
                     </template>
@@ -66,6 +66,9 @@
             methods: {
                 init: function () {
                     this.getItems();
+                },
+                showProduct: function () {
+                   console.log(12);
                 },
                 getItems: function () {
 
