@@ -11,19 +11,19 @@ class ItemsController extends Controller
     public function items_get(Request $request){
 
        $inputArray = $request->all();
-       $name = $inputArray['name'];
+       $search = $inputArray['name'];
        $limit = 10;
 
-       if($name !== ''){
+       if($search !== ''){
            $limit = 1000;
        }
 
         $products = Product::select('products.*','categories.name as cat_name')
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
-            ->where('products.name','LIKE','%'.$name.'%')
-            ->orWhere('categories.name','LIKE','%'.$name.'%')
-            ->orWhere('products.raw_id','LIKE','%'.$name.'%')
-            ->limit(50)
+            ->where('products.name','LIKE','%'.$search.'%')
+            ->orWhere('categories.name','LIKE','%'.$search.'%')
+            ->orWhere('products.raw_id','=',$search)
+            ->limit($limit)
             ->get();
         return json_encode($products);
     }
