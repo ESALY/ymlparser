@@ -33,6 +33,15 @@
             margin: 0;
         }
 
+        /* Products */
+       .image-wrap{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
         /* search div */
         .search-wrapper{
             margin: 15px;

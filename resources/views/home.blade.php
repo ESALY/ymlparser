@@ -29,13 +29,13 @@
                                     width="80">
                                 <template slot-scope="scope">
                                     <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
-                                        <img v-bind:src="scope.row.img" width="70" height="70">
+                                        <div class="image-wrap" v-bind:style="{ backgroundImage: 'url(' + scope.row.img + ')' }"></div>
                                     </a>
                                 </template>
                             </el-table-column>
                             <el-table-column
                                     label="Name"
-                                    width="150">
+                                    width="">
                             <template slot-scope="scope">
                                 <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
                                     @{{ scope.row.name }}
