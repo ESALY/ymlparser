@@ -35,8 +35,8 @@
 
         /* Products */
        .image-wrap{
-            width: 100%;
-            height: 100%;
+            width: 50px;
+            height: 50px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
