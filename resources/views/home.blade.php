@@ -24,7 +24,7 @@
                         <el-table
                                 :data="products"
                                 style="width: 100%">
-                            <el-table-column
+                            {{--<el-table-column
                                     fixed
                                     label="Img"
                                     width="80">
@@ -33,7 +33,7 @@
                                         <div class="image-wrap" v-bind:style="{ backgroundImage: 'url(' + scope.row.img + ')' }"></div>
                                     </a>
                                 </template>
-                            </el-table-column>
+                            </el-table-column>--}}
                             <el-table-column
                                     label="Name"
                                     width="">
