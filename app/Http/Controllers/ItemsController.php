@@ -12,11 +12,7 @@ class ItemsController extends Controller
 
        $inputArray = $request->all();
        $search = $inputArray['name'];
-       $limit = 10;
-
-       if($search !== ''){
-           $limit = 1000;
-       }
+       $limit = 50;
 
         $products = Product::select('products.*','categories.name as cat_name')
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
