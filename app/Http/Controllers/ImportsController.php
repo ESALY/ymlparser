@@ -68,7 +68,7 @@ class ImportsController extends Controller
             $yamlArray['shop_name'] = $array['shop']['name'];
             $yamlArray['offers'] = $array['shop']['offers']['offer'];
             $yamlArray['categories'] = $categoriesArray2;
-            dd($yamlArray['offers']);
+            //dd($yamlArray['offers']);
             $this->importProductsToDb($yamlArray);
         }
     }
@@ -110,8 +110,14 @@ class ImportsController extends Controller
                     }else{
                         $newOffer['img'] = $offer['picture'];
                     }
-
                 }
+
+                if (is_isset($offer['description'])) {
+                    $newOffer['description'] = $offer['description'];
+                }else{
+                    dd($offer);
+                }
+
 
                 $newOffer['raw_id'] = $id;
                 $newOffer['name'] = $name;
