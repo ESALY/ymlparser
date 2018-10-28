@@ -25,6 +25,15 @@
                                 :data="products"
                                 style="width: 100%">
                             <el-table-column
+                                    label="Img"
+                                    width="">
+                                <template slot-scope="scope">
+                                    <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
+                                        <img v-bind:src="scope.row.img" width="70" height="70">
+                                    </a>
+                                </template>
+                            </el-table-column>
+                            <el-table-column
                                     label="Name"
                                     width="">
                             <template slot-scope="scope">
