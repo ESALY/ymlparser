@@ -12,12 +12,19 @@ class ItemsController extends Controller
 
        $inputArray = $request->all();
        $name = $inputArray['name'];
+       $limit = 10;
+
+       if($name !== ''){
+           $limit = 1000;
+       }
 
         $products = Product::select('products.*','categories.name as cat_name')
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
             ->where('products.name','LIKE','%'.$name.'%')
             ->orWhere('categories.name','LIKE','%'.$name.'%')
-            ->limit(50)->get();
+            ->orWhere('products.raw_id','LIKE','%'.$name.'%')
+            ->limit(50)
+            ->get();
         return json_encode($products);
     }
 
