@@ -44,6 +44,14 @@
                             </template>
                             </el-table-column>
                             <el-table-column
+                                    label="Category"
+                                    width="80">
+                                <template slot-scope="scope">
+                                    @{{ scope.row. cat_name }}
+                                </template>
+                            </el-table-column>
+
+                            <el-table-column
                                     label="Price"
                                     width="80">
                                 <template slot-scope="scope">
