@@ -33,6 +33,13 @@
                                 </a>
                             </template>
                             </el-table-column>
+                            <el-table-column
+                                    label="Price"
+                                    width="">
+                                <template slot-scope="scope">
+                                        @{{ scope.row.price }}
+                                </template>
+                            </el-table-column>
                         </el-table>
                     </template>
                 </div>
