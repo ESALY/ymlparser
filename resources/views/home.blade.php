@@ -36,7 +36,7 @@
                             </el-table-column>--}}
                             <el-table-column
                                     label="Sku"
-                                    width="70">
+                                    width="100">
                                 <template slot-scope="scope">
                                         @{{ scope.row.raw_id }}
                                 </template>
