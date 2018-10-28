@@ -25,10 +25,13 @@
                                 :data="products"
                                 style="width: 100%">
                             <el-table-column
-                                    prop="name"
                                     label="Name"
-                                    width=""
-                                    @click="showProduct();">
+                                    width="">
+                            <template slot-scope="scope">
+                                <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
+                                    @{{ scope.row.name }}
+                                </a>
+                            </template>
                             </el-table-column>
                         </el-table>
                     </template>
