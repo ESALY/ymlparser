@@ -112,10 +112,10 @@ class ImportsController extends Controller
                     }
                 }
 
-                if (is_isset($offer['description'])) {
+                if (isset($offer['description'])) {
                     $newOffer['description'] = $offer['description'];
                 }else{
-                    dd($offer);
+                    $newOffer['description'] = '';
                 }
 
 
