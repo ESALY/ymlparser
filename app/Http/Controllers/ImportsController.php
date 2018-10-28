@@ -68,7 +68,7 @@ class ImportsController extends Controller
             $yamlArray['shop_name'] = $array['shop']['name'];
             $yamlArray['offers'] = $array['shop']['offers']['offer'];
             $yamlArray['categories'] = $categoriesArray2;
-            //dd($yamlArray['offers']);
+            dd($yamlArray['offers']);
             $this->importProductsToDb($yamlArray);
         }
     }
