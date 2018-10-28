@@ -21,7 +21,7 @@ class ItemsController extends Controller
             ->orWhere('products.raw_id','=',$search)
             ->limit($limit)
             ->get();
-        return json_encode($products);
+        return $products->toJson();
     }
 
     public function item_get($id){
