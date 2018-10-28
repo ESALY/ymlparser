@@ -93,7 +93,7 @@
             },
             methods: {
                 init: function () {
-                    this.getItems();
+                    //this.getItems();
                 },
                 showProduct: function () {
                    console.log(12);
