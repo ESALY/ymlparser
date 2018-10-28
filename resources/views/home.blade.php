@@ -35,6 +35,13 @@
                                 </template>
                             </el-table-column>--}}
                             <el-table-column
+                                    label="Sku"
+                                    width="70">
+                                <template slot-scope="scope">
+                                        @{{ scope.row.raw_id }}
+                                </template>
+                            </el-table-column>
+                            <el-table-column
                                     label="Name"
                                     width="350">
                             <template slot-scope="scope">
