@@ -13,7 +13,7 @@ class ItemsController extends Controller
        $inputArray = $request->all();
        $name = $inputArray['name'];
 
-        $products = Product::select('products.*','categories.name as cat_id')
+        $products = Product::select('products.*','categories.name as cat_name')
             ->join('categories', 'products.category_id', '=', 'categories.raw_id')
             ->where('products.name','LIKE','%'.$name.'%')
             ->limit(50)->get();
