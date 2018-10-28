@@ -113,6 +113,11 @@ class ImportsController extends Controller
                 }
 
                 if (isset($offer['description'])) {
+
+                    if(is_array($offer['description'])){
+                        dd($offer);
+                    }
+
                     $newOffer['description'] = $offer['description'];
                 }else{
                     $newOffer['description'] = '';
