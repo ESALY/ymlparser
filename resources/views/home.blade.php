@@ -25,6 +25,7 @@
                                 :data="products"
                                 style="width: 100%">
                             <el-table-column
+                                    fixed
                                     label="Img"
                                     width="80">
                                 <template slot-scope="scope">
