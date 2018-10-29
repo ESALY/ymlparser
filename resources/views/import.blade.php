@@ -16,7 +16,7 @@
             </el-header>
             <el-main>
                 <el-row>
-                    <el-col :span="8">
+                    <el-col :span="12">
                         <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
                             <el-form-item label="Импорт товаров">
                                 <el-input v-model="searchForm.name" @change="getItems()" clearable></el-input>
