@@ -27,7 +27,7 @@ class ItemsController extends Controller
 
     public function item_get($id){
 
-        if (Product::where('id','=', $id)->exists == false){
+        if (Product::where('id','=', $id)->exists() == false){
             return abort(404);
         }
 
