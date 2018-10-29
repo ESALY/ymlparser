@@ -21,8 +21,6 @@
                 </el-main>
                 <el-footer>
                     {{--Footer--}}
-                    Width: @{{ window.width }},
-                    Height: @{{ window.height }}
                 </el-footer>
             </el-container>
         </el-container>

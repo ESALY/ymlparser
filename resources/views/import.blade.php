@@ -17,12 +17,12 @@
             <el-main>
                 <el-row>
                     <el-col :span="12">
-                        <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
+                        <el-form :label-position="importForm.labelPosition" label-width="100px" :model="importForm">
                             <el-form-item label="Импорт товаров">
-                                <el-input v-model="searchForm.name" @change="getItems()" clearable></el-input>
+                                <el-input v-model="importForm.name" clearable></el-input>
                             </el-form-item>
                             <el-form-item>
-                                <el-button type="primary" @click="getItems()">Импортировать</el-button>
+                                <el-button type="primary" @click="importProducts()">Импортировать</el-button>
                             </el-form-item>
                         </el-form>
                     </el-col>
@@ -32,8 +32,6 @@
             </el-main>
             <el-footer>
                 {{--Footer--}}
-                Width: @{{ window.width }},
-                Height: @{{ window.height }}
             </el-footer>
         </el-container>
     </el-container>
@@ -47,18 +45,14 @@
             el: '#app',
             data: {
                 activeIndex: 1,
-                products: [],
                 window: {
                     width: 0,
                     height: 0
                 },
-                searchForm: {
+                importForm: {
                     labelPosition: 'top',
-                    name: '',
-                    region: '',
-                    type: ''
-                },
-                hello: 'im vue',
+                    name: ''
+                }
             },
             methods: {
                 init: function () {
@@ -67,7 +61,7 @@
                 showProduct: function () {
                    console.log(12);
                 },
-                getItems: function () {
+                importProducts: function () {
 
                     var name = '';
 
