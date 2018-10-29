@@ -13,9 +13,16 @@ class ImportsController extends Controller
 {
     public function importProducts(Request $request){
 
+        $result = '';
         $inputArray = $request->all();
         $url = trim($inputArray['url']);
-        $result = $this->import($url);
+
+        try {
+            $result = $this->import($url);
+        }
+        catch (\Exception $e) {
+            $result = 'Ошибка: ' . $e->getMessage();
+        }
 
         return $result;
     }
@@ -24,13 +31,10 @@ class ImportsController extends Controller
 
         //Адрес xml для импорта
         $urls = [];
-        $urls[] = "http://armprodukt.ru/bitrix/catalog_export/yandex.php";
+        $urls[] = "http://armprodukt.ru/bitrix/catalog_export/yandex.php1";
         $urls[] = "http://static.ozone.ru/multimedia/yml/facet/div_soft.xml";
         $urls[] = "http://www.trenazhery.ru/market2.xml";
         $urls[] = "http://www.radio-liga.ru/yml.php";
-
-
-        shuffle($urls);
 
         foreach ($urls as $url){
             print $url . "<br>";
