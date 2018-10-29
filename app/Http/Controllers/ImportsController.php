@@ -13,7 +13,7 @@ class ImportsController extends Controller
 {
     public function importProducts(Request $request){
         $inputArray = $request->all();
-        return 113;
+        return $inputArray['name'];
     }
 
     public function test_import(){
