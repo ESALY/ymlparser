@@ -7,7 +7,13 @@
             {{--Aside--}}
         </el-aside>
         <el-container>
-            <el-header>Header</el-header>
+            <el-header>
+                {{--Header--}}
+                <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal" @select="handleSelect">
+                    <el-menu-item index="1"><a href="{{URL::to('/')}}" target="_blank">Products</a></el-menu-item>
+                    <el-menu-item index="2"><a href="{{URL::to('/import')}}" target="_blank">Import</a></el-menu-item>
+                </el-menu>
+            </el-header>
             <el-main>
                 <div  class="product">
 
@@ -29,6 +35,7 @@
         var app = new Vue({
             el: '#app',
             data: {
+                activeIndex: 1,
                 products: [],
                 window: {
                     width: 0,
