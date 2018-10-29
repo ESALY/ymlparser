@@ -66,11 +66,20 @@
 
                             <el-table-column
                                     label="Price"
-                                    width="">
+                                    width="70">
                                 <template slot-scope="scope">
                                         @{{ scope.row.price }}
                                 </template>
                             </el-table-column>
+
+                            <el-table-column
+                                    label="Description"
+                                    width="">
+                                <template slot-scope="scope">
+                                    @{{ scope.row.description }}
+                                </template>
+                            </el-table-column>
+
                         </el-table>
                     </template>
                 </div>
