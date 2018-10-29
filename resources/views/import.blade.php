@@ -44,8 +44,7 @@
         var app = new Vue({
             el: '#app',
             data: {
-                defaultActive:1,
-                activeIndex: 1,
+                status: '',
                 window: {
                     width: 0,
                     height: 0
@@ -59,23 +58,18 @@
                 init: function () {
 
                 },
-                showProduct: function () {
-                   console.log(12);
-                },
                 importProducts: function () {
 
-                    var name = '';
-
-                    if(this.searchForm.name !== undefined){
-                        name = this.searchForm.name;
+                    if(this.importForm.name === ''){
+                        return;
                     }
 
-                    axios.post('https://tranquil-spire-73723.herokuapp.com/items/get', {
-                        name: name
+                    axios.post('https://tranquil-spire-73723.herokuapp.com/items/import', {
+                        name: his.importForm.name
                     })
                         .then(function (response) {
                             console.log(response.data);
-                            app.products = response.data;
+                            app.status = response.data;
                         })
                         .catch(function (error) {
                             console.log(error);

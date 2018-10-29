@@ -30,16 +30,6 @@
                         <el-table
                                 :data="products"
                                 style="width: 100%">
-                            {{--<el-table-column
-                                    fixed
-                                    label="Img"
-                                    width="80">
-                                <template slot-scope="scope">
-                                    <a :href="'https://www.vk.com/id' + scope.row.raw_id" target="_blank">
-                                        <div class="image-wrap" v-bind:style="{ backgroundImage: 'url(' + scope.row.img + ')' }"></div>
-                                    </a>
-                                </template>
-                            </el-table-column>--}}
                             <el-table-column
                                     label="Sku"
                                     width="100">
