@@ -26,7 +26,7 @@ class ItemsController extends Controller
     }
 
     public function item_get($id){
-        $product = Product::find($id)->get();
+        $product = Product::where('id','=',$id)->take(1)->first();
         return view('product',['product' => $product]);
     }
 }
