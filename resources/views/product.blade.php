@@ -17,7 +17,7 @@
                 <el-main>
                     <div  class="product-wrapper">
                         <div class="img-warapper">
-                            <img src="{{$product->img}}" alt="{{$product->name}}">
+                            <img src="{{$product->img}}" alt="{{$product->name}}" height="500">
                         </div>
                         <h3>{{$product->name}}</h3>
                         <div class="product-description">
