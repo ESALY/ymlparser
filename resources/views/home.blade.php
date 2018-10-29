@@ -20,8 +20,8 @@
             <el-header>
                 {{--Header--}}
                 <el-menu  class="el-menu-demo" mode="horizontal">
-                    <el-menu-item index="1"><a href="{{URL::to('/')}}" target="_blank">Products</a></el-menu-item>
-                    <el-menu-item index="2"><a href="{{URL::to('/import')}}" target="_blank">Import</a></el-menu-item>
+                    <el-menu-item index="1"><a href="{{URL::to('/')}}">Home</a></el-menu-item>
+                    <el-menu-item index="2"><a href="{{URL::to('/import')}}">Import</a></el-menu-item>
                 </el-menu>
             </el-header>
             <el-main>
