@@ -15,8 +15,15 @@
                 </el-menu>
             </el-header>
             <el-main>
-                <div  class="product">
-
+                <div  class="import-wrapper">
+                    <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
+                        <el-form-item label="Импорт товаров">
+                            <el-input v-model="searchForm.name" @change="getItems()" clearable></el-input>
+                        </el-form-item>
+                        <el-form-item>
+                            <el-button type="primary" @click="getItems()">Импортировать</el-button>
+                        </el-form-item>
+                    </el-form>
                 </div>
             </el-main>
             <el-footer>

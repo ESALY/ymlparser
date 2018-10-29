@@ -66,7 +66,7 @@
 
                             <el-table-column
                                     label="Price"
-                                    width="70">
+                                    width="">
                                 <template slot-scope="scope">
                                         @{{ scope.row.price }}
                                 </template>
