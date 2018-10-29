@@ -14,12 +14,12 @@
 Route::get('/', function () {
     return view('home');
 });
-
+Route::post('/items/get',['uses' =>'ItemsController@items_get']);
 Route::get('/import', function () {
     return view('import');
 });
 
 Route::get('/id/{id}',['uses' =>'ItemsController@item_get']);
-Route::post('/items/get',['uses' =>'ItemsController@items_get']);
+
 Route::get('/import-debug', 'ImportsController@test_import');
 Route::get('/debug2', 'ItemsController@items_get2');
