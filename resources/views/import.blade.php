@@ -65,7 +65,7 @@
                     }
 
                     axios.post('https://tranquil-spire-73723.herokuapp.com/items/import', {
-                        name: his.importForm.name
+                        name: this.importForm.name
                     })
                         .then(function (response) {
                             console.log(response.data);
