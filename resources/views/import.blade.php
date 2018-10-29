@@ -22,7 +22,7 @@
                                 <el-input v-model="importForm.name" clearable></el-input>
                             </el-form-item>
                             <el-form-item>
-                                <el-button type="primary" @click="importProducts()">Импортировать</el-button>
+                                <el-button type="primary" :loading="importStatus" @click="importProducts()">Импортировать</el-button>
                                 @{{ status }}
                             </el-form-item>
 
@@ -46,6 +46,7 @@
         var app = new Vue({
             el: '#app',
             data: {
+                importStatus: false,
                 status: '',
                 window: {
                     width: 0,
@@ -66,12 +67,15 @@
                         return;
                     }
 
+                    app.importStatus = true;
+
                     axios.post('items/import', {
                         name: this.importForm.name
                     })
                         .then(function (response) {
                             console.log(response.data);
                             app.status = response.data;
+                            app.importStatus = false;
                         })
                         .catch(function (error) {
                             console.log(error);
