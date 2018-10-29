@@ -120,7 +120,7 @@
                         name = this.searchForm.name;
                     }
 
-                    axios.post('https://tranquil-spire-73723.herokuapp.com/items/get', {
+                    axios.post('/items/get', {
                         name: name
                     })
                         .then(function (response) {
