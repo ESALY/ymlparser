@@ -12,8 +12,11 @@ use Sirian\YMLParser\Parser;
 class ImportsController extends Controller
 {
     public function importProducts(Request $request){
+
         $inputArray = $request->all();
-        return $inputArray['name'];
+        $result = $this->import($inputArray['url']);
+
+        return $result;
     }
 
     public function test_import(){
@@ -67,14 +70,16 @@ class ImportsController extends Controller
         //dd($categoriesArray);
 
         //Если существуют продукты то добавляем их в базу
-        if (isset($array['shop']['offers']['offer'])){
-
-            $yamlArray['shop_name'] = $array['shop']['name'];
-            $yamlArray['offers'] = $array['shop']['offers']['offer'];
-            $yamlArray['categories'] = $categoriesArray2;
-            //dd($yamlArray['offers']);
-            $this->importProductsToDb($yamlArray);
+        if (isset($array['shop']['offers']['offer']) == false){
+            return 'Товары не найдены.';
         }
+
+
+        $yamlArray['shop_name'] = $array['shop']['name'];
+        $yamlArray['offers'] = $array['shop']['offers']['offer'];
+        $yamlArray['categories'] = $categoriesArray2;
+
+        return $this->importProductsToDb($yamlArray);
     }
 
     //Добавляем товары в базу данных
@@ -139,8 +144,8 @@ class ImportsController extends Controller
         //Вносим новые товары в базу
         Product::insert($newOffers);
 
-        print "Всего товаров: " . count($yamlArray['offers']) . "<br>";
-        print "Импортировано товаров: " . count($newOffers) . "<br>";
+        //print "Всего товаров: " . count($yamlArray['offers']) . "<br>";
+        //print "Импортировано товаров: " . count($newOffers) . "<br>";
 
         //импорт категорий
         $categoryIDS = Category::pluck("raw_id");
@@ -170,8 +175,12 @@ class ImportsController extends Controller
         //Вносим новые категории в базу
         Category::insert($newCategories);
 
-        print "Всего категорий: " . count($yamlArray['offers']) . "<br>";
-        print "Импортировано категорий: " . count($newOffers) . "<br>";
+        //print "Всего категорий: " . count($yamlArray['offers']) . "<br>";
+        //print "Импортировано категорий: " . count($newOffers) . "<br>";
+
+        $result = 'Успешно импортировано: ' . count($newOffers) . ' Всего: ' . count($yamlArray['offers']);
+
+        return $result;
     }
 
 }

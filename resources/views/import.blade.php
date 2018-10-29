@@ -70,7 +70,7 @@
                     app.importStatus = true;
 
                     axios.post('items/import', {
-                        name: this.importForm.name
+                        url: this.importForm.name
                     })
                         .then(function (response) {
                             console.log(response.data);
