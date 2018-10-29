@@ -95,16 +95,15 @@ class ImportsController extends Controller
 
             if($productsIDS->contains($id) == false){
 
+
                 if (is_array($offer['categoryId'])) {
                     $newOffer['category_id'] = $offer['categoryId'][0];
                 }else{
                     $newOffer['category_id'] = $offer['categoryId'];
                 }
 
-                if (isset($offer['picture']) == false) {
-                    $newOffer['img'] = '';
-                }else{
-
+                $image = '';
+                if (isset($offer['picture'])) {
                     if (is_array($offer['picture'])) {
                         $newOffer['img'] = $offer['picture'][0];
                     }else{
@@ -115,9 +114,10 @@ class ImportsController extends Controller
 
                 $description = '';
                 if (isset($offer['description']) && !is_array($offer['description'])) {
-                    $description = str_limit($offer['description'], $limit = 1000, $end = '...');
+                    $description = str_limit($offer['description'], $limit = 500, $end = '...');
                 }
 
+                $newOffer['img'] = $image;
                 $newOffer['description'] = $description;
                 $newOffer['raw_id'] = $id;
                 $newOffer['name'] = $name;
