@@ -15,8 +15,8 @@
                     </el-menu>
                 </el-header>
                 <el-main>
-                    <div  class="product">
-
+                    <div  class="product-wrapper">
+                        {{}}
                     </div>
                 </el-main>
                 <el-footer>
