@@ -16,7 +16,7 @@
                 </el-header>
                 <el-main>
                     <div  class="product-wrapper">
-                        {{}}
+                        {{$product->id}}
                     </div>
                 </el-main>
                 <el-footer>
