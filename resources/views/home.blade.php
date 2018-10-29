@@ -72,14 +72,6 @@
                                 </template>
                             </el-table-column>
 
-                            <el-table-column
-                                    label="Description"
-                                    width="">
-                                <template slot-scope="scope">
-                                    @{{ scope.row.description }}
-                                </template>
-                            </el-table-column>
-
                         </el-table>
                     </template>
                 </div>
