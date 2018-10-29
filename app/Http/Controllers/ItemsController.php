@@ -19,6 +19,7 @@ class ItemsController extends Controller
             ->where('products.name','LIKE','%'.$search.'%')
             ->orWhere('categories.name','LIKE','%'.$search.'%')
             ->orWhere('products.raw_id','LIKE','%'.$search.'%')
+            ->orderBy('products.name','asc')
             ->limit($limit)
             ->get();
         return $products->toJson();
