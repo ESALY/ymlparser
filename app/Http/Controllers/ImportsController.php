@@ -14,7 +14,8 @@ class ImportsController extends Controller
     public function importProducts(Request $request){
 
         $inputArray = $request->all();
-        $result = $this->import($inputArray['url']);
+        $url = trim($inputArray['url']);
+        $result = $this->import($url);
 
         return $result;
     }
