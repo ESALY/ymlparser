@@ -16,7 +16,9 @@
                 </el-header>
                 <el-main>
                     <div  class="product-wrapper">
-                        <img src="{{$product->img}}" alt="{{$product->name}}">
+                        <div class="img-warapper">
+                            <img src="{{$product->img}}" alt="{{$product->name}}">
+                        </div>
                         <h3>{{$product->name}}</h3>
                         <div class="product-description">
                             {{$product->description}}
@@ -57,7 +59,7 @@
                     this.getItems();
                 },
                 showProduct: function () {
-                    console.log(12);
+
                 },
                 getItems: function () {
 

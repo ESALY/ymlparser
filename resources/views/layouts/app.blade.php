@@ -42,6 +42,12 @@
             background-position: center;
         }
 
+       /* Product */
+        .img-warapper{
+            max-width: 800px;
+            max-height: 800px;
+        }
+
         /* search div */
         .search-wrapper{
             margin: 15px;
