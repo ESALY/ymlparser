@@ -16,7 +16,11 @@
                 </el-header>
                 <el-main>
                     <div  class="product-wrapper">
-                        {{$product->id}}
+                        <img src="{{$product->img}}" alt="{{$product->name}}">
+                        <h3>{{$product->id}}</h3>
+                        <div class="product-description">
+                            {{$product->description}}
+                        </div>
                     </div>
                 </el-main>
                 <el-footer>
