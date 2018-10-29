@@ -44,6 +44,7 @@
         var app = new Vue({
             el: '#app',
             data: {
+                defaultActive:1,
                 activeIndex: 1,
                 window: {
                     width: 0,
@@ -56,7 +57,7 @@
             },
             methods: {
                 init: function () {
-                    this.getItems();
+
                 },
                 showProduct: function () {
                    console.log(12);

@@ -90,6 +90,7 @@
         var app = new Vue({
             el: '#app',
             data: {
+                defaultActive:1,
                 activeIndex: 1,
                 products: [],
                 window: {
