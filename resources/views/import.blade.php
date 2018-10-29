@@ -15,16 +15,20 @@
                 </el-menu>
             </el-header>
             <el-main>
-                <div  class="import-wrapper">
-                    <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
-                        <el-form-item label="Импорт товаров">
-                            <el-input v-model="searchForm.name" @change="getItems()" clearable></el-input>
-                        </el-form-item>
-                        <el-form-item>
-                            <el-button type="primary" @click="getItems()">Импортировать</el-button>
-                        </el-form-item>
-                    </el-form>
-                </div>
+                <el-row>
+                    <el-col :span="8">
+                        <el-form :label-position="searchForm.labelPosition" label-width="100px" :model="searchForm">
+                            <el-form-item label="Импорт товаров">
+                                <el-input v-model="searchForm.name" @change="getItems()" clearable></el-input>
+                            </el-form-item>
+                            <el-form-item>
+                                <el-button type="primary" @click="getItems()">Импортировать</el-button>
+                            </el-form-item>
+                        </el-form>
+                    </el-col>
+                </el-row>
+
+
             </el-main>
             <el-footer>
                 {{--Footer--}}
