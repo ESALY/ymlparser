@@ -24,6 +24,7 @@
                             <el-form-item>
                                 <el-button type="primary" @click="importProducts()">Импортировать</el-button>
                             </el-form-item>
+                            @{{ status }}
                         </el-form>
                     </el-col>
                 </el-row>

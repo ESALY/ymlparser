@@ -11,6 +11,10 @@ use Sirian\YMLParser\Parser;
 
 class ImportsController extends Controller
 {
+    public function importProducts(Request $request){
+        $inputArray = $request->all();
+        return $inputArray['name'];
+    }
 
     public function test_import(){
 
