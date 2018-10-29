@@ -19,7 +19,7 @@
         <el-container>
             <el-header>
                 {{--Header--}}
-                <el-menu :default-active="activeIndex" class="el-menu-demo" mode="horizontal">
+                <el-menu  class="el-menu-demo" mode="horizontal">
                     <el-menu-item index="1"><a href="{{URL::to('/')}}" target="_blank">Products</a></el-menu-item>
                     <el-menu-item index="2"><a href="{{URL::to('/import')}}" target="_blank">Import</a></el-menu-item>
                 </el-menu>
