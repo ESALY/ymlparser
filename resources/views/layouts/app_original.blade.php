@@ -12,7 +12,7 @@
 
     <!-- Styles -->
     {{--<link href="{{ asset('css/app.css') }}" rel="stylesheet">--}}
-    <link href="https://tranquil-spire-73723.herokuapp.com/public/css/app.css" rel="stylesheet">
+    <link href="123" rel="stylesheet">
 </head>
 <body>
     <div id="app">
