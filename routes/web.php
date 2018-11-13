@@ -24,3 +24,11 @@ Route::get('/id/{id}',['uses' =>'ItemsController@item_get']);
 
 Route::get('/import-debug', 'ImportsController@test_import');
 Route::get('/debug2', 'ItemsController@items_get2');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
