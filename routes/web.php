@@ -11,4 +11,29 @@
 |
 */
 
+Route::get('/', function () {
+    return view('home');
+});
 
+Route::get('/original2', function () {
+    return view('home_original');
+});
+
+Route::post('/items/get',['uses' =>'ItemsController@items_get']);
+Route::post('items/import',['uses' =>'ImportsController@importProducts']);
+Route::get('/import', function () {
+    return view('import');
+});
+
+Route::get('/id/{id}',['uses' =>'ItemsController@item_get']);
+
+Route::get('/import-debug', 'ImportsController@test_import');
+Route::get('/debug2', 'ItemsController@items_get2');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
