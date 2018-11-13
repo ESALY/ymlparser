@@ -12,11 +12,12 @@
     <link rel="shortcut icon" href="images/favicon.png">
 
     <!-- Styles -->
-    <link rel="stylesheet" href="{{ secure_asset('/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/style.css') }}">
+
 
     <!-- Js -->
-    <script src="{{ secure_asset('/js/vue.js') }}"></script>
-    <script src="{{ secure_asset('/js/axios.min.js') }}"></script>
+    <script src="{{ asset('/js/vue.js') }}"></script>
+    <script src="{{ asset('/js/axios.min.js') }}"></script>
 
     <!-- import JavaScript -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
