@@ -14,6 +14,11 @@
 Route::get('/', function () {
     return view('home');
 });
+
+Route::get('/original', function () {
+    return view('home_original');
+});
+
 Route::post('/items/get',['uses' =>'ItemsController@items_get']);
 Route::post('items/import',['uses' =>'ImportsController@importProducts']);
 Route::get('/import', function () {
