@@ -10,7 +10,7 @@ window._ = require('lodash');
 try {
     window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap-sass');
+    //require('bootstrap-sass');
 } catch (e) {}
 
 /**
@@ -43,6 +43,7 @@ if (token) {
  * allows your team to easily build robust real-time web applications.
  */
 
+
 // import Echo from 'laravel-echo'
 
 // window.Pusher = require('pusher-js');
@@ -53,3 +54,10 @@ if (token) {
 //     cluster: 'mt1',
 //     encrypted: true
 // });
+
+import VueRouter from 'vue-router';
+window.VueRouter =  VueRouter;
+
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+window.ElementUI =  ElementUI;

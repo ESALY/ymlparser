@@ -15,9 +15,23 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/mobile', function () {
+    return view('mobile');
+});
+
 Route::get('/original2', function () {
     return view('home_original');
 });
+
+Route::get('/get-json', function () {
+    $arr = array(
+        'header' => '4546', 'body' => '888',
+    );
+
+    return $arr;
+});
+
+
 
 Route::post('/items/get',['uses' =>'ItemsController@items_get']);
 Route::post('items/import',['uses' =>'ImportsController@importProducts']);
